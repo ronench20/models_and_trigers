@@ -11,11 +11,11 @@ public class InputMover: MonoBehaviour {
     [SerializeField] InputAction move = new InputAction(
         type: InputActionType.Value, expectedControlType: nameof(Vector2));
 
-    void OnEnable()  {
+    void OnEnable(){
         move.Enable();
     }
 
-    void OnDisable()  {
+    void OnDisable(){
         move.Disable();
     }
 

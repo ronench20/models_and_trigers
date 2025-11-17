@@ -10,15 +10,15 @@ public class ClickSpawner: MonoBehaviour {
     [SerializeField] protected Vector3 velocityOfSpawnedObject;
     protected float timer = 0f;
 
-    void OnEnable()  {
+    void OnEnable(){
         spawnAction.Enable();
     }
 
-    void OnDisable()  {
+    void OnDisable(){
         spawnAction.Disable();
     }
 
-    protected virtual GameObject spawnObject() {
+    protected virtual GameObject spawnObject(){
         Debug.Log("Spawning a new "+prefabToSpawn.name);
 
         // Step 1: spawn the new object.
@@ -35,7 +35,7 @@ public class ClickSpawner: MonoBehaviour {
         return newObject;
     }
     
-    private void Update() {
+    private void Update(){
         if (spawnAction.WasPressedThisFrame()) {
             spawnObject();
         }
